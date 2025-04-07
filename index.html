@@ -39,28 +39,23 @@
         .banner-text h1 {
             font-size: 3em;
             margin: 0;
-            display: none; /* Suppression visuelle du titre */
+            display: none;
         }
 
         .banner-text p {
             font-size: 1.5em;
-            margin-top: 22.2rem; /* Descendre le slogan de 2 cm environ */
-        }
-
-        .container {
-            display: flex;
-            max-width: 1200px;
-            margin: auto;
-            padding: 2rem;
-            gap: 2rem;
+            margin-top: 22.2rem; /* Descendre le slogan encore de 2 cm environ */
         }
 
         nav.sidebar {
+            position: absolute;
+            top: 100px;
+            left: 0;
             width: 200px;
             background-color: #1c3faa;
             color: white;
             padding: 1rem;
-            border-radius: 12px;
+            border-radius: 0 12px 12px 0;
             height: fit-content;
         }
 
@@ -77,6 +72,15 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            gap: 2rem;
+            margin-left: 220px; /* Décale le contenu principal à droite du menu */
         }
 
         main {
@@ -123,11 +127,14 @@
             .container {
                 flex-direction: column;
                 padding: 1rem;
+                margin-left: 0;
             }
 
             nav.sidebar {
+                position: relative;
                 width: 100%;
                 margin-bottom: 1rem;
+                border-radius: 12px;
             }
         }
     </style>
@@ -141,18 +148,18 @@
         </div>
     </header>
 
-    <div class="container">
-        <nav class="sidebar">
-            <ul>
-                <li><a href="#">Accueil</a></li>
-                <li><a href="#">Matchs</a></li>
-                <li><a href="#">Articles</a></li>
-                <li><a href="#">Galerie</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#">Vidéos</a></li>
-            </ul>
-        </nav>
+    <nav class="sidebar">
+        <ul>
+            <li><a href="#">Accueil</a></li>
+            <li><a href="#">Matchs</a></li>
+            <li><a href="#">Articles</a></li>
+            <li><a href="#">Galerie</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Vidéos</a></li>
+        </ul>
+    </nav>
 
+    <div class="container">
         <main>
             <section class="next-matches">
                 <h2>Matchs à venir</h2>
@@ -185,6 +192,12 @@
             </section>
         </main>
     </div>
+
+    <footer>
+        <p>&copy; 2025 Sempre Turchini. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
 
     <footer>
         <p>&copy; 2025 Sempre Turchini. Tous droits réservés.</p>
