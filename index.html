@@ -4,6 +4,132 @@
     <meta charset="UTF-8">
     <title>Sempre Turchini</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header.banner {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        header.banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+
+        .banner-text h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .banner-text p {
+            font-size: 1.5em;
+            margin-top: 1.5rem;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: auto;
+            padding: 2rem;
+            gap: 2rem;
+        }
+
+        nav.sidebar {
+            width: 200px;
+            background-color: #1c3faa;
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            height: fit-content;
+        }
+
+        nav.sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav.sidebar li {
+            margin: 1rem 0;
+        }
+
+        nav.sidebar a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            flex: 1;
+        }
+
+        section {
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #1c3faa;
+            border-bottom: 2px solid #1c3faa;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        article h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem;
+            background-color: #1c3faa;
+            color: white;
+        }
+
+        @media screen and (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 1rem;
+            }
+
+            nav.sidebar {
+                width: 100%;
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="banner">
