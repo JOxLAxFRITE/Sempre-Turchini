@@ -64,6 +64,12 @@ body {
     border-radius: 8px;
 }
 
+.sidebar li a i {
+    margin-right: 8px;
+    color: white;
+    min-width: 20px;
+}
+
 .container {
     display: flex;
     gap: 2rem;
