@@ -37,6 +37,19 @@
         .sidebar li.open a .chevron {
             transform: rotate(180deg);
         }
+
+        .grid-two-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .video-embed iframe {
+            width: 100%;
+            height: 200px;
+            border-radius: 12px;
+            border: none;
+        }
     </style>
 </head>
 <body>
@@ -97,16 +110,23 @@
                 </a>
             </section>
 
-            <section class="next-matches">
-                <h2>Matchs à venir</h2>
-                <ul>
-                    <li>Ligue 2 | SC Bastia vs Laval - 14/04/2025</li>
-                    <li>Ligue 2 | Paris FC vs SC Bastia - 19/04/2025</li>
-                    <li>Ligue 2 | SC Bastia vs Grenoble - 25/04/2025</li>
-                    <li>Ligue 2 | Guingamp vs SC Bastia - 02/05/2025</li>
-                    <li>Ligue 2 | SC Bastia vs Caen - 10/05/2025</li>
-                </ul>
-            </section>
+            <div class="grid-two-columns">
+                <section class="next-matches">
+                    <h2>Matchs à venir</h2>
+                    <ul>
+                        <li>Ligue 2 | SC Bastia vs Laval - 14/04/2025</li>
+                        <li>Ligue 2 | Paris FC vs SC Bastia - 19/04/2025</li>
+                        <li>Ligue 2 | SC Bastia vs Grenoble - 25/04/2025</li>
+                        <li>Ligue 2 | Guingamp vs SC Bastia - 02/05/2025</li>
+                        <li>Ligue 2 | SC Bastia vs Caen - 10/05/2025</li>
+                    </ul>
+                </section>
+
+                <section class="video-embed">
+                    <h2>Résumé du dernier match</h2>
+                    <iframe src="https://www.youtube.com/embed/4YZEIa3nEVE" allowfullscreen></iframe>
+                </section>
+            </div>
 
             <section class="videos">
                 <h2>Dernières vidéos</h2>
