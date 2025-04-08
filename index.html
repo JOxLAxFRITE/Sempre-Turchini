@@ -28,6 +28,15 @@
         .sidebar li.toggleable {
             cursor: pointer;
         }
+
+        .sidebar li a .chevron {
+            margin-left: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar li.open a .chevron {
+            transform: rotate(180deg);
+        }
     </style>
 </head>
 <body>
@@ -45,16 +54,21 @@
         <ul>
             <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
             <li><a href="#"><i class="fas fa-newspaper"></i> Articles</a></li>
-            <li><a href="#"><i class="fas fa-calendar-alt"></i> Matchs</a></li>
+            <li class="toggleable">
+                <a href="#"><i class="fas fa-calendar-alt"></i> Matchs <i class="fas fa-chevron-down chevron"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Prochain match</a></li>
+                    <li><a href="#">Matchs passés</a></li>
+                </ul>
+            </li>
             <li><a href="#"><i class="fas fa-image"></i> Galerie</a></li>
             <li class="toggleable">
-  <a href="#"><i class="fas fa-video"></i> Vidéos</a>
-  <ul class="submenu">
-      <li><a href="#">Conf de presse</a></li>
-      <li><a href="#">Résumés de matchs</a></li>
-  </ul>
-</li>
-
+                <a href="#"><i class="fas fa-video"></i> Vidéos <i class="fas fa-chevron-down chevron"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">Conférences de presse</a></li>
+                    <li><a href="#">Résumés de matchs</a></li>
+                </ul>
+            </li>
             <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
@@ -110,7 +124,6 @@
     </footer>
 
     <script>
-        // JS optionnel pour toggler proprement
         document.querySelectorAll('.toggleable > a').forEach(el => {
             el.addEventListener('click', function (e) {
                 e.preventDefault();
