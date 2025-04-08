@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <style>
+        .submenu {
+            display: none;
+            list-style: none;
+            padding-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .submenu li a {
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .sidebar li.open .submenu {
+            display: block;
+        }
+
+        .sidebar li.toggleable {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <header class="banner">
@@ -23,11 +44,17 @@
         </div>
         <ul>
             <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
-            <li><a href="#"><i class="fas fa-calendar-alt"></i> Matchs</a></li>
             <li><a href="#"><i class="fas fa-newspaper"></i> Articles</a></li>
+            <li><a href="#"><i class="fas fa-calendar-alt"></i> Matchs</a></li>
             <li><a href="#"><i class="fas fa-image"></i> Galerie</a></li>
+            <li class="toggleable" onclick="this.classList.toggle('open')">
+                <a><i class="fas fa-video"></i> Vidéos</a>
+                <ul class="submenu">
+                    <li><a href="#">Conférences de presse</a></li>
+                    <li><a href="#">Résumés de matchs</a></li>
+                </ul>
+            </li>
             <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
-            <li><a href="#"><i class="fas fa-video"></i> Vidéos</a></li>
         </ul>
     </nav>
 
@@ -80,5 +107,15 @@
     <footer>
         <p>&copy; 2025 Sempre Turchini. Tous droits réservés.</p>
     </footer>
+
+    <script>
+        // JS optionnel pour toggler proprement
+        document.querySelectorAll('.toggleable > a').forEach(el => {
+            el.addEventListener('click', function (e) {
+                e.preventDefault();
+                this.parentElement.classList.toggle('open');
+            });
+        });
+    </script>
 </body>
 </html>
