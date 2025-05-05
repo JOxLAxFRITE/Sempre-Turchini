@@ -2,164 +2,63 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Sempre Turchini</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <!-- Google Font -->
+    <title>Accueil - Sempre Turchini</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <style>
-        .submenu {
-            display: none;
-            list-style: none;
-            padding-left: 1.5rem;
-            margin-top: 0.5rem;
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
         }
-
-        .submenu li a {
-            font-size: 0.9rem;
-            color: white;
-        }
-
-        .sidebar li.open .submenu {
-            display: block;
-        }
-
-        .sidebar li.toggleable {
-            cursor: pointer;
-        }
-
-        .sidebar li a .chevron {
-            margin-left: auto;
-            transition: transform 0.3s ease;
-        }
-
-        .sidebar li.open a .chevron {
-            transform: rotate(180deg);
-        }
-
-        .grid-two-columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .video-embed iframe {
-            width: 100%;
-            height: 200px;
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            background: white;
+            padding: 2rem;
             border-radius: 12px;
-            border: none;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            flex: 1;
         }
-
-        footer {
-            text-align: center;
-            padding: 1rem;
+        header {
             background-color: #1c3faa;
             color: white;
-            margin: 0;
-            width: 100%;
+            padding: 2rem;
+            text-align: center;
         }
+        h1 { color: #1c3faa; }
     </style>
 </head>
-<body style="margin:0;">
-    <header class="banner">
-        <img src="banniere.jpg" alt="Bannière du site Sempre Turchini">
-        <div class="banner-text">
-            <p style="margin-top: 22.2rem;">Le site des passionnés du Sporting Club de Bastia</p>
-        </div>
-    </header>
-
+<body>
     <nav class="sidebar">
         <div style="text-align: center; margin-bottom: 2rem; margin-top: -1cm;">
             <img src="Sempre_Turchini_Logo_Lion_Blason_1905.png" alt="Logo Sempre Turchini" style="width: 130px; height: auto; background-color: #1c3faa; border-radius: 50%; padding: 5px; display: block; margin: 0 auto;">
         </div>
         <ul>
-            <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
-            <li><a href="#"><i class="fas fa-newspaper"></i> Articles</a></li>
+            <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
+            <li><a href="articles.html"><i class="fas fa-newspaper"></i> Articles</a></li>
             <li><a href="buvette.html"><i class="fas fa-beer"></i> La Buvette</a></li>
             <li class="toggleable">
                 <a href="#"><i class="fas fa-calendar-alt"></i> Matchs <i class="fas fa-chevron-down chevron"></i></a>
                 <ul class="submenu">
-                    <li><a href="#">Prochain match</a></li>
+                    <li><a href="matchs.html">Calendrier</a></li>
                     <li><a href="#">Matchs passés</a></li>
                 </ul>
             </li>
-            <li><a href="#"><i class="fas fa-image"></i> Galerie</a></li>
-            <li class="toggleable">
-                <a href="#"><i class="fas fa-video"></i> Vidéos <i class="fas fa-chevron-down chevron"></i></a>
-                <ul class="submenu">
-                    <li><a href="#">Conférences de presse</a></li>
-                    <li><a href="#">Résumés de matchs</a></li>
-                </ul>
-            </li>
+            <li><a href="galerie.html"><i class="fas fa-image"></i> Galerie</a></li>
+            <li><a href="videos.html"><i class="fas fa-video"></i> Vidéos</a></li>
             <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
         </ul>
     </nav>
-
-    <div class="container">
-        <main>
-            <section class="news">
-                <h2>Derniers articles</h2>
-                <a href="#">
-                    <article class="featured-article">
-                        <img src="article1.jpg" alt="Bastia vs Annecy">
-                        <div class="article-text">
-                            <h3>Le Sporting repart d'Annecy avec un point</h3>
-                            <p>Un match solide du Sporting malgré les absents. Retour sur les temps forts de la rencontre.</p>
-                        </div>
-                    </article>
-                </a>
-                <a href="#">
-                    <article class="featured-article">
-                        <img src="article2.jpg" alt="Interview Tavenot">
-                        <div class="article-text">
-                            <h3>Interview exclusive de Benoît Tavenot</h3>
-                            <p>Le coach revient sur la forme actuelle de l’équipe et les ambitions de fin de saison.</p>
-                        </div>
-                    </article>
-                </a>
-            </section>
-
-            <div class="grid-two-columns">
-                <section class="next-matches">
-                    <h2>Matchs à venir</h2>
-                    <ul>
-                        <li>Ligue 2 | SC Bastia vs Laval - 14/04/2025</li>
-                        <li>Ligue 2 | Paris FC vs SC Bastia - 19/04/2025</li>
-                        <li>Ligue 2 | SC Bastia vs Grenoble - 25/04/2025</li>
-                        <li>Ligue 2 | Guingamp vs SC Bastia - 02/05/2025</li>
-                        <li>Ligue 2 | SC Bastia vs Caen - 10/05/2025</li>
-                    </ul>
-                </section>
-
-                <section class="video-embed">
-                    <h2>Résumé du dernier match</h2>
-                    <iframe src="https://www.youtube.com/embed/4YZEIa3nEVE" allowfullscreen></iframe>
-                </section>
-            </div>
-
-            <section class="videos">
-                <h2>Dernières vidéos</h2>
-                <ul>
-                    <li><a href="#">Résumé Annecy - SC Bastia (1-1)</a></li>
-                    <li><a href="#">Conférence de presse de Benoit Tavenot</a></li>
-                    <li><a href="#">Ambiance de Furiani avant Dunkerque</a></li>
-                </ul>
-            </section>
-        </main>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Sempre Turchini. Tous droits réservés.</p>
-    </footer>
-
-    <script>
-        document.querySelectorAll('.toggleable > a').forEach(el => {
-            el.addEventListener('click', function (e) {
-                e.preventDefault();
-                this.parentElement.classList.toggle('open');
-            });
-        });
-    </script>
+    <main>
+        <header><h1>Accueil</h1></header>
+        <section class="news">
+            <h2>Derniers articles</h2>
+            <p>Bienvenue sur Sempre Turchini, le site des passionnés du Sporting Club de Bastia !</p>
+            <p>Découvrez nos derniers articles, les résumés de matchs, les interviews et bien plus encore.</p>
+        </section>
+    </main>
 </body>
 </html>
